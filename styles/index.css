@@ -85,3 +85,69 @@ body{
     font-weight: 500;
 }
 
+main{
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .inimg{
+    width: 650px;
+    opacity: .3;
+}
+
+/* Hamburguesa oculta por defecto */
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 1001;
+    background: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px #46464644;
+}
+
+/* Responsive: tablets y móviles */
+@media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 260px;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
+        box-shadow: 5px 0 15px #46464644;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .hamburger {
+        display: block;
+    }
+    main {
+        width: 100vw;
+    }
+}
+
+/* Siempre visible en PC */
+@media (min-width: 1025px) {
+    .sidebar {
+        position: static;
+        transform: none;
+        width: auto;
+        box-shadow: 5px 5px 5px #464646;
+    }
+    .hamburger {
+        display: none;
+    }
+}
