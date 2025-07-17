@@ -6,15 +6,16 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     list-style: none;
-    font-size: 15px;
+    font-size: 16px;
     text-decoration: none;
     scroll-behavior: smooth;
 }
 
 :root {
-  --color-principal: #184798;     
-  --color-secundario: #89d2f4;    
-  --color-cositas: #999999;     
+  --color-principal: #5D6532;     
+  --color-secundario: #b9c388;    
+  --color-cositas: #999999;    
+  --color-fondo: #b9c388;
 }
 
 ::-webkit-scrollbar {
@@ -23,6 +24,8 @@
 
 body{
     display: flex;
+    gap: 1rem;
+    background-color: var(--color-fondo);
 }
 
 .sidebar{
@@ -31,17 +34,45 @@ body{
     overflow: hidden;
     height: 100vh;
     background-color: var(--color-principal);
-    padding: 1rem 2rem;
-    gap: 2rem;
+    padding: 2rem 2rem;
+    gap: 1.7rem;
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
+    box-shadow: 5px 5px 5px #464646;
+}
+
+.sidebar .sideB_image{
+    width: 170px;
+    border-radius: 10%;
+}
+
+.sidebar .drone{
+    align-self: center;
+    color: white;
+    font-size: larger;
 }
 
 .sidebar .sideplace{
     display: flex;
     align-items: center;
     justify-content: start;
+    padding: .5rem .7rem;
     gap: .5rem;
+    border-radius: 20px;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+
+.sidebar .sideplace:hover{
+    background-color: var(--color-fondo);
+}
+
+.sidebar .sideplace:hover .side_item{
+    color: black;
+}
+
+.sidebar .sideplace:hover i{
+    color: black;
 }
 
 .sidebar .sideplace i{
@@ -49,23 +80,8 @@ body{
     font-size: 22px;
 }
 
-.sidebar .side_item{
+.sidebar .sideplace .side_item{
     color: white;
-    position: relative;
-}
-
-.sidebar .side_item::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background-color: #ffffff;
-    transition: width 0.4s ease-in-out;
-}
-
-.sidebar .side_item:hover::after{
-    width: 100%;
+    font-weight: 500;
 }
 
