@@ -2,11 +2,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const hamburger = document.querySelector('.hamburger')
     const sidebar = document.querySelector('.sidebar')
 
-    const auto = document.getElementById('auto')
     const alcance = document.getElementById('alcance')
     const carga = document.getElementById('carga')
     const video = document.getElementById('video')
     const report = document.getElementById('report')
+
 
     if (hamburger && sidebar) {
         hamburger.addEventListener('click', function () {
@@ -24,10 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     //modules redirect
-
-    auto.addEventListener('click', (e) => {
-    location.href = "/views/auto.html";
-    });
 
     alcance.addEventListener('click', (e) => {
     location.href = "/views/alcance.html";

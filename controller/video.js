@@ -37,10 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
     location.href = "/views/carga.html";
     });
 
-    video.addEventListener('click', (e) => {
-    location.href = "/views/video.html";
-    });
-
     report.addEventListener('click', (e) => {
     location.href = "/views/report.html";
     });

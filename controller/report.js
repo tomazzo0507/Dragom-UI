@@ -41,8 +41,4 @@ document.addEventListener('DOMContentLoaded', function () {
     location.href = "/views/video.html";
     });
 
-    report.addEventListener('click', (e) => {
-    location.href = "/views/report.html";
-    });
-
 })

@@ -62,6 +62,10 @@ body{
     cursor: pointer;
 }
 
+.now{
+    background-color: var(--color-fondo);
+}
+
 .sidebar .sideplace:hover{
     background-color: var(--color-fondo);
 }
@@ -91,12 +95,6 @@ main{
     justify-content: center;
     align-items: center;
 }
-
-main .inimg{
-    width: 650px;
-    opacity: .2;
-}
-
 
 .hamburger {
     display: none;
