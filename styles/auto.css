@@ -118,7 +118,6 @@ main h1{
     color: var(--color-principal);
 }
 
-
 .parent {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
